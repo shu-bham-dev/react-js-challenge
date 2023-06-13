@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 import ThumbnailCircle from "../../components/ThumbnailCircle";
 
 const Video = () => {
-  const [showThumbnails, setShowThumbnails] = useState(true);
+  const [showThumbnails, setShowThumbnails] = useState(false);
   const [playerVideo, setPlayerVideo] = useState(
     "https://www.youtube.com/watch?v=ysz5S6PUM-U"
   );
@@ -25,25 +25,25 @@ const Video = () => {
   };
 
   return (
-    <div className="w-1/2 m-auto mt-20">
+    <div className="mt-20 w-5/12 m-auto">
       <div className="text-blue-800 font-bold ml-72 mb-10">Video Player</div>
       <div>
         <ReactPlayer url={playerVideo} />
       </div>
       <div
-        className="flex mt-2 overflow-x-auto scrollbar-hidden"
-        style={{ width: "100%", height: "100px" }}
         onMouseEnter={() => setShowThumbnails(true)}
-        onMouseLeave={() => setShowThumbnails(true)}
+        onMouseLeave={() => setShowThumbnails(false)}
       >
-        {showThumbnails &&
-          videoURLS.map((url, index) => (
-            <ThumbnailCircle
-              key={index}
-              imageUrl={url}
-              onClick={() => handleThumbnailClick(url)}
-            />
-          ))}
+        <div className="overflow-x-scroll	overflow-y-hidden	whitespace-nowrap mt-4">
+          {showThumbnails &&
+            videoURLS.map((url, index) => (
+              <ThumbnailCircle
+                key={index}
+                imageUrl={url}
+                onClick={() => handleThumbnailClick(url)}
+              />
+            ))}
+        </div>
       </div>
     </div>
   );
