@@ -9,6 +9,13 @@ type FormValues = {
 };
 
 const Login: React.FC = () => {
+  const validationSchema = Yup.object().shape({
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("The email field is required"),
+    password: Yup.string().required("The password field is required"),
+  });
+
   const {
     register,
     handleSubmit,
@@ -25,7 +32,7 @@ const Login: React.FC = () => {
         className="w-full"
         alt="background"
       />
-      <div className="w-[48%] m-auto bg-white absolute left-96 top-20">
+      <div className="lg:w-[48%] m-auto bg-white absolute lg:left-[25rem] md:left-44 sm:left-32 top-20">
         <div className="shadow">
           <img
             src={require("../../images/amazon-logo.png")}
@@ -33,7 +40,7 @@ const Login: React.FC = () => {
             alt=""
           />
         </div>
-        <div className="mx-32 mb-12">
+        <div className="lg:mx-32 mx-10 mb-12">
           <div className="text-green-600 text-4xl mt-4 mb-6 text-center">
             Login
           </div>
@@ -118,10 +125,3 @@ const Login: React.FC = () => {
 };
 
 export default Login;
-
-const validationSchema = Yup.object().shape({
-  email: Yup.string()
-    .email("Invalid email address")
-    .required("The email field is required"),
-  password: Yup.string().required("The password field is required"),
-});
