@@ -30,6 +30,7 @@ const Login: React.FC = () => {
           <img
             src={require("../../images/amazon-logo.png")}
             className="w-24 m-auto py-3"
+            alt=""
           />
         </div>
         <div className="mx-32 mb-12">
