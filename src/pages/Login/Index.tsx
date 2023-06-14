@@ -17,9 +17,7 @@ const Login: React.FC = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data); // Replace with your sign-in logic
-  };
+  const onSubmit: SubmitHandler<FormValues> = (data) => {};
   return (
     <div>
       <img

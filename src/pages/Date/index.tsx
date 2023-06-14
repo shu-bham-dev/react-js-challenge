@@ -34,25 +34,16 @@ const Date = () => {
     <div className="mt-10">
       <h2 className="text-red-600 font-bold">Duration Calculator</h2>
       <div>
-        <label htmlFor="from-date">From Date:</label>
-        <input
-          type="datetime-local"
-          id="from-date"
-          onChange={handleFromDateChange}
-        />
+        <label>From Date:</label>
+        <input type="datetime-local" onChange={handleFromDateChange} />
       </div>
       <div>
-        <label htmlFor="duration">Duration (in hours):</label>
-        <input
-          type="number"
-          id="duration"
-          value={duration}
-          onChange={handleDurationChange}
-        />
+        <label>Duration (in hours):</label>
+        <input type="number" value={duration} onChange={handleDurationChange} />
       </div>
       <div>
-        <label htmlFor="to-date">To Date:</label>
-        <input type="text" id="to-date" value={toDate} readOnly />
+        <label>To Date:</label>
+        <input type="text" value={toDate} readOnly />
       </div>
     </div>
   );
