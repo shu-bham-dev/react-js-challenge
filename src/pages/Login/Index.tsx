@@ -92,13 +92,21 @@ const Login: React.FC = () => {
           </div>
           <div className="text-center my-4 text-sm font-semibold">or</div>
           <div className="flex items-center bg-blue-500 px-1 py-1 rounded mb-2 cursor-pointer">
-            <img src={require("../../images/google-icon.png")} className="" />
+            <img
+              src={require("../../images/google-icon.png")}
+              className=""
+              alt=""
+            />
             <span className="text-white m-auto text-lg">
               Continue with Google
             </span>
           </div>
           <div className="flex items-center bg-blue-500 px-1 py-1 rounded cursor-pointer">
-            <img src={require("../../images/facebook-icon.png")} className="" />
+            <img
+              src={require("../../images/facebook-icon.png")}
+              className=""
+              alt=""
+            />
             <span className="text-white m-auto text-lg">
               Continue with Facebook
             </span>
