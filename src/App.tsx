@@ -12,6 +12,7 @@ function App() {
         <Route path="/video" element={<Video />} />
         <Route path="/date" element={<Date />} />
       </Routes>
+      hi
     </BrowserRouter>
   );
 }
