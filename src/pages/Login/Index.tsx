@@ -16,8 +16,8 @@ const Login: React.FC = () => {
     password: Yup.string()
       .required("The password field is required")
       .matches(
-        /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
-        "Password must contain at least 8 characters, one letter, and one number"
+        /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
+        "Password must contain at least 8 characters, one upper case letter,one lower case letter, one special character and one number"
       ),
   });
 
